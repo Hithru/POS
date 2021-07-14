@@ -57,11 +57,15 @@
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
+    <?php
+        include "modules/header.php"
+
+    ?>
 
 
 </div>
 <!-- ./wrapper -->
 
-<script src="js/template.js"></script>
+<script src="views/js/template.js"></script>
 </body>
 </html>

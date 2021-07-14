@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdba2b96-284f-4fe8-953c-7c934104ec19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/js/template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/img/template/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/img/template/icono-blanco.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/img/template/icono-negro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/img/template/logo-blanco-bloque.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/img/template/logo-blanco-lineal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/img/template/logo-negro-bloque.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/img/template/logo-negro-lineal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/img/users/default/anonymous.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
     </list>
@@ -43,11 +51,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1sj0KozWGp8xmCoKbALekZRVnv0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -71,7 +83,7 @@
       <updated>1621370629310</updated>
       <workItem from="1621370631312" duration="934000" />
       <workItem from="1622280178942" duration="609000" />
-      <workItem from="1626254242025" duration="4144000" />
+      <workItem from="1626254242025" duration="6361000" />
     </task>
     <servers />
   </component>
@@ -89,5 +101,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
