@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdba2b96-284f-4fe8-953c-7c934104ec19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/modules/404.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/modules/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/customer.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/customers.controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/product.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/products.controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/product.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/products.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/dist/css/AdminLTE.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/dist/css/AdminLTE.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/users.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users.controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/users.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/users.model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +81,7 @@
       <workItem from="1626254242025" duration="6361000" />
       <workItem from="1628846779219" duration="2693000" />
       <workItem from="1631793825685" duration="451000" />
-      <workItem from="1633150398902" duration="6091000" />
+      <workItem from="1633150398902" duration="9293000" />
     </task>
     <servers />
   </component>
@@ -115,9 +112,9 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2683" y="224" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631793867014" />
-    <state x="3194" y="446" key="NewPhpFileDialog" timestamp="1633155939171">
+    <state x="3194" y="446" key="NewPhpFileDialog" timestamp="1633162891184">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="3194" y="446" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1633155939171" />
+    <state x="3194" y="446" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1633162891184" />
   </component>
 </project>
