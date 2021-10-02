@@ -58,9 +58,26 @@
 <!-- Site wrapper -->
 <div class="wrapper">
     <?php
-        include "modules/header.php"
+        include "modules/header.php";
 
+    /*=============================================
+      =            sidebar          =
+      =============================================*/
+
+        include "modules/sidebar.php";
+      /*
+            Content
+      */
+        include "modules/content.php";
+
+
+    /*=============================================
+    =            Footer          =
+    =============================================*/
+
+        include "modules/footer.php";
     ?>
+
 
 
 </div>
