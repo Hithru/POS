@@ -65,10 +65,37 @@
       =============================================*/
 
         include "modules/sidebar.php";
-      /*
-            Content
-      */
-        include "modules/content.php";
+
+
+
+    if(isset($_GET["route"])){
+
+        if ($_GET["route"] == 'home' ||
+            $_GET["route"] == 'users' ||
+            $_GET["route"] == 'categories' ||
+            $_GET["route"] == 'products' ||
+            $_GET["route"] == 'customers' ||
+            $_GET["route"] == 'manage-sales' ||
+            $_GET["route"] == 'create-sales' ||
+            $_GET["route"] == 'sales-report' ||
+            $_GET["route"] == 'logout'){
+
+            include "modules/".$_GET["route"].".php";
+        }
+
+        else{
+
+            include "modules/404.php";
+
+        }
+
+    }
+
+    else{
+
+        include "modules/home.php";
+
+    }
 
 
     /*=============================================

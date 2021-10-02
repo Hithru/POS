@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdba2b96-284f-4fe8-953c-7c934104ec19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/modules/content.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/modules/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/modules/sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/categories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/create-sales.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/customers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/manage-sales.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/products.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/sales-report.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/modules/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/modules/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/modules/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +86,7 @@
       <workItem from="1626254242025" duration="6361000" />
       <workItem from="1628846779219" duration="2693000" />
       <workItem from="1631793825685" duration="451000" />
-      <workItem from="1633150398902" duration="1874000" />
+      <workItem from="1633150398902" duration="4077000" />
     </task>
     <servers />
   </component>
@@ -103,13 +109,17 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="3114" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1633154638099">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="3114" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1633154638099" />
     <state x="2683" y="224" key="FileChooserDialogImpl" timestamp="1631793867014">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2683" y="224" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631793867014" />
-    <state x="3194" y="446" key="NewPhpFileDialog" timestamp="1633152572945">
+    <state x="3194" y="446" key="NewPhpFileDialog" timestamp="1633154761969">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="3194" y="446" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1633152572945" />
+    <state x="3194" y="446" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1633154761969" />
   </component>
 </project>
