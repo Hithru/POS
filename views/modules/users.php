@@ -34,7 +34,7 @@
             </div>
 
             <div class="box-body">
-                <table class="table table-bordered table-striped" >
+                <table class="table table-bordered table-striped dt-responsive tables" >
                     <thead>
                     <tr>
                         <th>#</th>
