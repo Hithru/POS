@@ -20,12 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdba2b96-284f-4fe8-953c-7c934104ec19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/connection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/modules/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/img/template/back.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/users.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users.controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/users.model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/users.model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/dist/css/AdminLTE.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/dist/css/AdminLTE.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/modules/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/modules/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/modules/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/modules/users.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
       <workItem from="1626254242025" duration="6361000" />
       <workItem from="1628846779219" duration="2693000" />
       <workItem from="1631793825685" duration="451000" />
-      <workItem from="1633150398902" duration="9293000" />
+      <workItem from="1633150398902" duration="15020000" />
     </task>
     <servers />
   </component>
