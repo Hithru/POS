@@ -37,7 +37,7 @@
                 <table class="table table-bordered table-striped dt-responsive tables" >
                     <thead>
                     <tr>
-                        <th>#</th>
+                        <th style="width:10px">#</th>
                         <th>Name</th>
                         <th>Username</th>
                         <th>Photo</th>
@@ -260,7 +260,10 @@
                     <button type="submit" class="btn btn-primary">Save</button>
 
                 </div>
-
+                <?php
+                    $createUser = new ControllerUsers();
+                    $createUser -> ctrCreateUser();
+                ?>
             </form>
 
         </div>
