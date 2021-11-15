@@ -1,10 +1,11 @@
+
 <div class="content-wrapper">
 
     <section class="content-header">
 
         <h1>
 
-            User Management
+            User management
 
         </h1>
 
@@ -12,7 +13,7 @@
 
             <li><a href="home"><i class="fa fa-dashboard"></i> Home</a></li>
 
-            <li class="active">User Management</li>
+            <li class="active">Dashboard</li>
 
         </ol>
 
@@ -23,20 +24,23 @@
         <div class="box">
 
             <div class="box-header with-border">
+
                 <button class="btn btn-primary" data-toggle="modal" data-target="#addUser">
 
                     Add user
 
                 </button>
 
-
-
             </div>
 
             <div class="box-body">
-                <table class="table table-bordered table-striped dt-responsive tables" >
+
+                <table class="table table-bordered table-striped dt-responsive tables" width="100%">
+
                     <thead>
+
                     <tr>
+
                         <th style="width:10px">#</th>
                         <th>Name</th>
                         <th>Username</th>
@@ -45,86 +49,76 @@
                         <th>Status</th>
                         <th>Last login</th>
                         <th>Actions</th>
+
                     </tr>
+
                     </thead>
 
                     <tbody>
 
-                    <tr>
-                        <td>1</td>
-                        <td>User Administration</td>
-                        <td>admin</td>
-                        <td><img src="views/img/users/default/anonymous.png" class="img-thumbnail" width="40px"></td>
-                        <td>Administrator</td>
-                        <td><button class="btn btn-success btn-xs">Active</button></td>
-                        <td>2021-10-03 12:05:32</td>
-                        <td>
+                    <?php
 
-                            <div class="btn-group">
+                    $item = null;
+                    $value = null;
 
-                                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+                    $users = ControllerUsers::ctrShowUsers($item, $value);
 
-                                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                    // var_dump($users);
 
-                            </div>
+                    foreach ($users as $key => $value) {
 
-                        </td>
+                        echo '
 
-                    </tr>
+                  <tr>
+                    <td>'.($key+1).'</td>
+                    <td>'.$value["name"].'</td>
+                    <td>'.$value["user"].'</td>';
 
+                        if ($value["photo"] != ""){
 
-                    <tr>
+                            echo '<td><img src="'.$value["photo"].'" class="img-thumbnail" width="40px"></td>';
 
-                        <td>1</td>
-                        <td>User Administrator</td>
-                        <td>admin</td>
-                        <td><img src="views/img/users/default/anonymous.png" class="img-thumbnail" width="40px"></td>
-                        <td>Administrator</td>
-                        <td><button class="btn btn-success btn-xs">Active</button></td>
-                        <td>2017-12-11 12:05:32</td>
-                        <td>
+                        }else{
 
-                            <div class="btn-group">
+                            echo '<td><img src="views/img/users/default/anonymous.png" class="img-thumbnail" width="40px"></td>';
 
-                                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+                        }
 
-                                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                        echo '<td>'.$value["profile"].'</td>';
 
-                            </div>
+                        if($value["status"] != 0){
 
-                        </td>
+                            echo '<td><button class="btn btn-success btnActivate btn-xs" userId="'.$value["id"].'" userStatus="0">Activated</button></td>';
 
-                    </tr>
+                        }else{
 
-                    <tr>
+                            echo '<td><button class="btn btn-danger btnActivate btn-xs" userId="'.$value["id"].'" userStatus="1">Deactivated</button></td>';
+                        }
 
-                        <td>1</td>
-                        <td>User Administrator</td>
-                        <td>admin</td>
-                        <td><img src="views/img/users/default/anonymous.png" class="img-thumbnail" width="40px"></td>
-                        <td>Administrator</td>
-                        <td><button class="btn btn-success btn-xs">Active</button></td>
-                        <td>2017-12-11 12:05:32</td>
-                        <td>
+                        echo '<td>'.$value["lastLogin"].'</td>
 
-                            <div class="btn-group">
+                    <td>
 
-                                <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
+                      <div class="btn-group">
+                          
+                        <button class="btn btn-warning btnEditUser" idUser="'.$value["id"].'" data-toggle="modal" data-target="#editUser"><i class="fa fa-pencil"></i></button>
 
-                                <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                        <button class="btn btn-danger btnDeleteUser" userId="'.$value["id"].'" username="'.$value["user"].'" userPhoto="'.$value["photo"].'"><i class="fa fa-times"></i></button>
 
-                            </div>
+                      </div>  
 
-                        </td>
+                    </td>
 
-                    </tr>
+                  </tr>';
+                    }
+
+                    ?>
 
                     </tbody>
+
                 </table>
 
-
             </div>
-
 
         </div>
 
@@ -136,17 +130,15 @@
 =            module add user            =
 ======================================-->
 
-
 <!-- Modal -->
 <div id="addUser" class="modal fade" role="dialog">
 
     <div class="modal-dialog">
 
         <!-- Modal content-->
-
         <div class="modal-content">
 
-            <form role="form" method="POST" enctype="multipart/formdata">
+            <form role="form" method="POST" enctype="multipart/form-data">
 
                 <!--=====================================
                 HEADER
@@ -169,7 +161,6 @@
                     <div class="box-body">
 
                         <!--Input name -->
-
                         <div class="form-group">
 
                             <div class="input-group">
@@ -183,35 +174,32 @@
                         </div>
 
                         <!-- input username -->
-
                         <div class="form-group">
 
                             <div class="input-group">
 
                                 <span class="input-group-addon"><i class="fa fa-key"></i></span>
 
-                                <input class="form-control input-lg" type="text" name="newUser" placeholder="Add username" required>
+                                <input class="form-control input-lg" type="text" id="newUser" name="newUser" placeholder="Add username" required>
 
                             </div>
 
                         </div>
 
                         <!-- input password -->
-
                         <div class="form-group">
 
                             <div class="input-group">
 
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
 
-                                <input class="form-control input-lg" type="text" name="newPasswd" placeholder="Add password" required>
+                                <input class="form-control input-lg" type="password" name="newPasswd" placeholder="Add password" required>
 
                             </div>
 
                         </div>
 
                         <!-- input profile -->
-
                         <div class="form-group">
 
                             <div class="input-group">
@@ -231,17 +219,16 @@
 
                         </div>
 
-                        <!-- input password -->
-
+                        <!-- Uploading image -->
                         <div class="form-group">
 
                             <div class="panel">Upload image</div>
 
-                            <input id="newPhoto" type="file" name="newPhoto">
+                            <input class="newPics" type="file" name="newPhoto">
 
-                            <p class="help-block">Maximum size 200Mb</p>
+                            <p class="help-block">Maximum size 2Mb</p>
 
-                            <img src="views/img/users/default/anonymous.png" class="img-thumbnail" width="100px">
+                            <img class="thumbnail preview" src="views/img/users/default/anonymous.png" width="100px">
 
                         </div>
 
@@ -260,10 +247,152 @@
                     <button type="submit" class="btn btn-primary">Save</button>
 
                 </div>
+
                 <?php
-                    $createUser = new ControllerUsers();
-                    $createUser -> ctrCreateUser();
+                $createUser = new ControllerUsers();
+                $createUser -> ctrCreateUser();
                 ?>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+<!--====  End of module add user  ====-->
+
+<!--=====================================
+=            module edit user            =
+======================================-->
+
+<!-- Modal -->
+<div id="editUser" class="modal fade" role="dialog">
+
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <form role="form" method="POST" enctype="multipart/form-data">
+
+                <!--=====================================
+                HEADER
+                ======================================-->
+
+                <div class="modal-header" style="background: #3c8dbc; color: #fff">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <h4 class="modal-title">Edit user</h4>
+
+                </div>
+
+                <!--=====================================
+                BODY
+                ======================================-->
+
+                <div class="modal-body">
+
+                    <div class="box-body">
+
+                        <!--Input name -->
+                        <div class="form-group">
+
+                            <div class="input-group">
+
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+
+                                <input class="form-control input-lg" type="text" id="EditName" name="EditName" placeholder="Edit name" required>
+
+                            </div>
+
+                        </div>
+
+                        <!-- input username -->
+                        <div class="form-group">
+
+                            <div class="input-group">
+
+                                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+
+                                <input class="form-control input-lg" type="text" id="EditUser" name="EditUser" placeholder="Edit username" readonly>
+
+                            </div>
+
+                        </div>
+
+                        <!-- input password -->
+                        <div class="form-group">
+
+                            <div class="input-group">
+
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+
+                                <input class="form-control input-lg" type="password" name="EditPasswd" placeholder="Add new password">
+
+                                <input type="hidden" name="currentPasswd" id="currentPasswd">
+
+                            </div>
+
+                        </div>
+
+                        <!-- input profile -->
+                        <div class="form-group">
+
+                            <div class="input-group">
+
+                                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+
+                                <select class="form-control input-lg" name="EditProfile">
+
+                                    <option value="" id="EditProfile"></option>
+                                    <option value="administrator">Administrator</option>
+                                    <option value="special">Special</option>
+                                    <option value="seller">Seller</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Uploading image -->
+                        <div class="form-group">
+
+                            <div class="panel">Upload image</div>
+
+                            <input class="newPics" type="file" name="editPhoto">
+
+                            <p class="help-block">Maximum size 2Mb</p>
+
+                            <img class="thumbnail preview" src="views/img/users/default/anonymous.png" alt="" width="100px">
+
+                            <input type="hidden" name="currentPicture" id="currentPicture">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--=====================================
+                FOOTER
+                ======================================-->
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+
+                    <button type="submit" class="btn btn-primary">Edit User</button>
+
+                </div>
+
+                <?php
+                $editUser = new ControllerUsers();
+                $editUser -> ctrEditUser();
+                ?>
+
             </form>
 
         </div>
@@ -272,4 +401,9 @@
 
 </div>
 
-<!--====  End of module add user  ====-->
+<?php
+
+$deleteUser = new ControllerUsers();
+$deleteUser -> ctrDeleteUser();
+
+?> 
